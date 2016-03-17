@@ -14,8 +14,8 @@ for LIST in "${LIST_NAMES[@]}"
 do
     echo "-------------------------------"
     echo "${LIST} Environment..."
-    loopArr=${LIST[@]}
-    for server in "${!loopArr}"
+    looparray="$LIST[@]"
+    for server in "${!looparray}"
     do
         ssh -o StrictHostKeyChecking=no ${myname}@${server} 'bash -s' < Sample_Script.sh
     done
