@@ -6,7 +6,7 @@ Table of contents
 -----------------
 
   * [Technologies](#technologies)
-  * [Project Structure](#project-structure)
+  * [Configuration Management](#Configuration)
   * [Contributing](#contributing)
 
 Technologies
