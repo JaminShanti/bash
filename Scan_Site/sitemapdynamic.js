@@ -3,7 +3,7 @@
  */
 
 
-function initialize() {
+window.addEvent('domready', function initialize() {
         var mapOptions = {
           zoom: 15,
           panControl: false,
@@ -65,9 +65,9 @@ function initialize() {
         console.log(e);
         popup.open(map, this);
     });
-}
+})
 initialize();
 
-});//]]>
+
 
 
