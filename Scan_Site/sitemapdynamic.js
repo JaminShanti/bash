@@ -5,10 +5,10 @@
 
 window.addEvent('domready', function initialize() {
         var mapOptions = {
-          zoom: 15,
-          panControl: false,
-          mapTypeControl: false,
-          center: new google.maps.LatLng(41.89924, -87.62756),
+          zoom: 7,
+          panControl: true,
+          mapTypeControl: true,
+          center: new google.maps.LatLng(35.5570023, -79.6203712),
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         var map = new google.maps.Map(document.getElementById('map_canvas'),
@@ -23,48 +23,17 @@ window.addEvent('domready', function initialize() {
             icon: image,
         });
 
-        var styles = [
-                  {
-                    stylers: [
-                      { hue: "#ff9f67" },
-                      { saturation: -20 },
-                      { gamma: 1.50 }
-                    ]
-                  },{
-                    featureType: "road",
-                    elementType: "geometry",
-                    stylers: [
-                      { lightness: 100 },
-                      { visibility: "simplified" }
-                    ]
-                  },{
-                    featureType: "road",
-                    elementType: "labels.text.stroke",
-                    stylers: [
-                      { visibility: "off" }
-                    ]
-                  },
-
-                  {
-                    featureType: "water",
-                    elementType: "geometry.fill",
-                    stylers: [
-                        { visibility: "on" },
-                        { color: "#ffa066" },
-                        { lightness: 80 }
-                    ]
-                    }
-                ];
-    map.setOptions({styles: styles});
 
     // Code for infowindow
     var popup=new google.maps.InfoWindow({
         content: "Hello"
     });
+
     google.maps.event.addListener(marker, 'click', function(e) {
         console.log(e);
         popup.open(map, this);
     });
+
 })
 initialize();
 
